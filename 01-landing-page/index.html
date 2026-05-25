@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Captación con IA para Agencias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0F0A1F',
+                        accent: {
+                            purple: '#8B5CF6',
+                            cyan: '#06B6D4',
+                            pink: '#EC4899'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: linear-gradient(135deg, #0F0A1F 0%, #1A0F3F 100%); }
+        .gradient-text { background: linear-gradient(90deg, #8B5CF6, #06B6D4, #EC4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow-button { box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); }
+        .glow-button:hover { box-shadow: 0 0 30px rgba(139, 92, 246, 0.8); }
+    </style>
+</head>
+<body class="text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed w-full top-0 z-50 backdrop-blur-md bg-black/30 border-b border-purple-500/20">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <svg width="40" height="40" viewBox="0 0 200 240" class="opacity-90">
+                    <!-- COIMAGEN Logo -->
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Triángulos izquierda (verde-cyan) -->
+                    <polygon points="70,130 90,150 50,150" fill="#14B8A6"/>
+                    <polygon points="90,130 110,150 70,150" fill="#06B6D4"/>
+                    <polygon points="110,130 130,150 90,150" fill="#0891B2"/>
+                    <!-- Triángulos centro (púrpura-azul) -->
+                    <polygon points="90,90 110,110 70,110" fill="#8B5CF6"/>
+                    <polygon points="110,90 130,110 90,110" fill="#6366F1"/>
+                    <polygon points="130,90 150,110 110,110" fill="#1E40AF"/>
+                    <!-- Triángulos superior -->
+                    <polygon points="110,50 130,70 90,70" fill="#A78BFA"/>
+                    <polygon points="130,50 150,70 110,70" fill="#8B5CF6"/>
+                    <!-- Triángulos derecha (naranja-amarillo) -->
+                    <polygon points="130,130 150,150 110,150" fill="#F97316"/>
+                    <polygon points="150,130 170,150 130,150" fill="#FBBF24"/>
+                </svg>
+                <span class="font-bold text-xl">COIMAGEN</span>
+            </div>
+            <a href="#cta" class="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold hover:shadow-lg transition">
+                Empezar
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-purple-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-64 h-64 bg-pink-500 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">
+                <span class="gradient-text">Automatiza tu Adquisición</span>
+                <br>
+                con IA Enterprise
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Transforma tu operación de ventas B2B. Captura, califica y nurture leads automáticamente con inteligencia artificial de nivel empresarial.
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="https://wa.me/TUTELEFONO" id="cta" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-bold text-lg glow-button transition hover:scale-105">
+                    Reservar Demo en WhatsApp
+                </a>
+                <button class="px-8 py-4 bg-white/10 border border-purple-400 rounded-full font-semibold backdrop-blur hover:bg-white/20 transition">
+                    Ver Casos de Éxito
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-20 px-6 bg-gradient-to-b from-transparent to-purple-950/30">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-black text-center mb-4">Beneficios Comprobados</h2>
+            <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto">Todo lo que necesitas para dominar tu mercado</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Beneficio 1 -->
+                <div class="group bg-white/5 backdrop-blur border border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/60 transition cursor-pointer hover:bg-white/10">
+                    <div class="mb-6 text-5xl">⚡</div>
+                    <h3 class="text-2xl font-bold mb-3">80% Menos Tiempo</h3>
+                    <p class="text-gray-400">
+                        Automatiza captación, calificación y nutrición de leads. De semanas a horas.
+                    </p>
+                </div>
+
+                <!-- Beneficio 2 -->
+                <div class="group bg-white/5 backdrop-blur border border-pink-500/30 rounded-2xl p-8 hover:border-pink-500/60 transition cursor-pointer hover:bg-white/10">
+                    <div class="mb-6 text-5xl">📈</div>
+                    <h3 class="text-2xl font-bold mb-3">3x Más Conversiones</h3>
+                    <p class="text-gray-400">
+                        IA predice qué leads cierran. Enfócate solo en los prospectos calificados.
+                    </p>
+                </div>
+
+                <!-- Beneficio 3 -->
+                <div class="group bg-white/5 backdrop-blur border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/60 transition cursor-pointer hover:bg-white/10">
+                    <div class="mb-6 text-5xl">💰</div>
+                    <h3 class="text-2xl font-bold mb-3">ROI en 90 Días</h3>
+                    <p class="text-gray-400">
+                        Implementación rápida. Resultados inmediatos. Tus competidores quedarán atrás.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso en 3 Pasos -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-black text-center mb-16">Proceso Automatizado</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Paso 1 -->
+                <div class="relative">
+                    <div class="flex flex-col items-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-4xl font-black mb-4">1</div>
+                        <h3 class="text-2xl font-bold text-center mb-3">Captación</h3>
+                        <p class="text-gray-400 text-center">
+                            Formularios inteligentes capturan leads en tu web, LinkedIn y email.
+                        </p>
+                    </div>
+                    <div class="absolute top-20 -right-4 hidden md:block">
+                        <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="relative">
+                    <div class="flex flex-col items-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-full flex items-center justify-center text-4xl font-black mb-4">2</div>
+                        <h3 class="text-2xl font-bold text-center mb-3">Clasificación IA</h3>
+                        <p class="text-gray-400 text-center">
+                            Algoritmo predice score de compra en tiempo real. Hot leads primero.
+                        </p>
+                    </div>
+                    <div class="absolute top-20 -right-4 hidden md:block">
+                        <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-pink-600 to-orange-600 rounded-full flex items-center justify-center text-4xl font-black mb-4">3</div>
+                        <h3 class="text-2xl font-bold text-center mb-3">Conversión</h3>
+                        <p class="text-gray-400 text-center">
+                            Emails automáticos + seguimiento inteligente cierran la venta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-20 px-6 bg-gradient-to-b from-transparent to-pink-950/20">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-black text-center mb-16">Lo que Dicen Nuestros Clientes</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/5 backdrop-blur border border-purple-500/30 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-300 mb-6">
+                        "Pasamos de 2 leads/semana a 35. La IA filtra automáticamente los que no cierran. Ganamos 6 meses de tiempo."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full"></div>
+                        <div>
+                            <p class="font-bold">Carlos Mendez</p>
+                            <p class="text-sm text-gray-400">Director - Growth Agency</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur border border-cyan-500/30 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-300 mb-6">
+                        "ROI al primer mes. Los workflows automáticos liberaron a mi equipo. Ahora solo hacemos ventas de alto valor."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full"></div>
+                        <div>
+                            <p class="font-bold">Marina Ruiz</p>
+                            <p class="text-sm text-gray-400">CEO - Digital Marketing Co</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur border border-pink-500/30 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-300 mb-6">
+                        "Implementación en 48 horas. Sin código. El soporte es increíble. Mejor decisión que tomamos este año."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full"></div>
+                        <div>
+                            <p class="font-bold">Juan López</p>
+                            <p class="text-sm text-gray-400">Founder - B2B Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-6">Inicia Tu Transformación Hoy</h2>
+            <p class="text-lg text-white/80 mb-8 max-w-xl mx-auto">
+                Demo gratuita. Sin tarjeta. 15 minutos. Conoce cómo automatizar tu operación completa.
+            </p>
+            <a href="https://wa.me/TUTELEFONO" class="inline-block px-10 py-4 bg-white text-purple-600 rounded-full font-bold text-lg hover:scale-105 transition transform">
+                Habla con Nosotros por WhatsApp →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-purple-500/20 py-12 px-6 bg-black/50">
+        <div class="max-w-6xl mx-auto text-center text-gray-400">
+            <p>© 2024 COIMAGEN - Automatización con IA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
