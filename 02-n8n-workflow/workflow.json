@@ -1,0 +1,29 @@
+{
+  "name": "B2B Lead Acquisition & Nurturing System",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://your-form-endpoint.com"
+      },
+      "id": "1_form_trigger",
+      "name": "Form Submission Trigger",
+      "type": "n8n-nodes-base.webhook"
+    },
+    {
+      "id": "2_slack_notification",
+      "name": "Slack Notification",
+      "type": "n8n-nodes-base.slack"
+    },
+    {
+      "id": "3_notion_crm_entry",
+      "name": "Create Notion CRM Entry",
+      "type": "n8n-nodes-base.notion"
+    },
+    {
+      "id": "4_ai_classification",
+      "name": "AI Lead Scoring",
+      "type": "n8n-nodes-base.openai"
+    }
+  ]
+}
